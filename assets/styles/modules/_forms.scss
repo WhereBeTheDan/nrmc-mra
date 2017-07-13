@@ -1,0 +1,143 @@
+
+form {
+    text-align: left;
+}
+
+    fieldset {
+        padding: 0;
+        margin-bottom: 1em;
+        border: none;
+
+        legend {
+            font-size: $medium-text;
+            font-weight: bold;
+            margin-bottom: 0.5em;
+        }
+    }
+
+    input, textarea, select {
+        display: block;
+        width: 100%;
+        font-size: $large-text;
+        margin-bottom: 0.5em;
+        background-color: $white;
+        border-radius: 0;
+        -webkit-appearance: none;
+        border: none;
+        font-size: $normal-text;
+        padding: 0.5em 1em;
+        color: $text-color;
+        border-radius: 5px;
+        border: 1px solid lighten($grey, 10%);
+
+        &:focus {
+            outline: none;
+            border-color: $orange;
+        }
+
+        @each $prefix in ('::-webkit-input-placeholder', ':-moz-placeholder', '::-moz-placeholder', ':-ms-input-placeholder') {
+            &#{$prefix} {
+                color: $med-grey;
+            }
+        }
+    }
+
+    label {
+        font-weight: normal;
+    }
+
+    [type="checkbox"] {
+        display: inline-block;
+        width: auto;
+        -webkit-appearance: checkbox;
+    }
+
+    [type="submit"] {
+        @extend .btn;
+        width: auto;
+
+        &:focus, &:active:focus {
+            outline: none;
+        }
+    }
+
+// Form field replacements
+.hidden-input {
+    position: absolute !important;
+    clip: rect(0,0,0,0) !important;
+
+    &:checked + label {
+        &:after {
+            position: absolute;
+            color: $med-blue;
+            top: 50%;
+            transform: translateY(-50%);
+        }
+    }
+}
+
+.replacement-label {
+    display: flex;
+    align-items: baseline;
+    position: relative;
+    margin-bottom: 0.5em;
+    font-size: $medium-text;
+
+    &:before {
+        content: '';
+        display: inline-block;
+        height: $base;
+        width: $base;
+        border: 1px solid $grey;
+        vertical-align: text-top;
+        margin: 0 0.3em 0 0;
+    }
+}
+
+// Checkbox
+.checkbox-label {
+    @extend .replacement-label;
+}
+
+.checkbox {
+    @extend .hidden-input;
+
+    &:checked + label {
+        &:after {
+            content: $check;
+            font-family: $fa;
+            left: 0;
+            line-height: $base;
+        }
+    }
+}
+
+// Radio button
+.radio-label {
+    @extend .replacement-label;
+
+    &:before {
+        border-radius: 50%;
+    }
+}
+
+.radio {
+    @extend .hidden-input;
+
+    &:checked + label {
+        &:after {
+            content: '';
+            height: 0.75 * $base;
+            width: 0.75 * $base;
+            left: 0.125 * $base;
+            border-radius: 50%;
+            background-color: $med-blue;
+        }
+    }
+}
+
+.login-form {
+    .forgot-password {
+        float: right;
+    }
+}

@@ -1,0 +1,21 @@
+
+@include media-breakpoint-up(lg) {
+
+	.main-nav {
+  		.nav {
+	  		li {
+	  			flex-grow: 0;
+
+	  			a {
+	  				padding: 1em;
+	  			}
+	  		}
+	  	}
+	}
+
+	.pricing-grid {
+		.pricing-item {
+			@extend .col-lg-3;
+		}
+	}
+}

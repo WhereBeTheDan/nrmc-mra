@@ -1,0 +1,97 @@
+/******************************************************************
+Site Name: UJA
+Author: Sagetopia
+
+Stylesheet: Typography
+******************************************************************/
+
+html {
+    font-size: $base;
+}
+
+body {
+    font-size: 90%;
+    font-family: $body;
+    color: $text-color;
+    line-height: 1.5;
+}
+
+h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6 {
+    font-family: $heading;
+    font-weight: 500;
+    letter-spacing: 1px;
+    line-height: 1.2;
+    margin: 0 0 0.5em;
+}
+
+h1, .h1 {
+    font-size: $h1;
+}
+
+h2, .h2 {
+    font-size: $h2;
+}
+
+h3, .h3 {
+    font-size: $h3;
+}
+
+h4, .h4 {
+    font-size: $h4;
+}
+
+h5, .h5 {
+    font-size: $h5;
+}
+
+h6, .h6 {
+    font-size: $h6;
+}
+
+p, ol, ul {
+    font-size: $medium-text;
+    font-weight: 300;
+    margin: 0 0 1em;
+}
+
+p {
+    margin: 0 0 1em;
+    hyphens: none;
+}
+
+.site-title {
+    letter-spacing: 1px;
+    margin: 0;
+    line-height: 1;
+}
+
+.site-subtitle {
+    margin: 0;
+    font-weight: 500;
+}
+
+.section-title {
+    color: $green;
+    font-size: $h1;
+}
+
+.box-title {
+    font-size: $medium-text;
+    text-transform: uppercase;
+    color: $white;
+    background-color: $med-blue;
+    margin: 0;
+    padding: 1em;
+    font-family: $body;
+}
+
+/************************************************************************/
+/*                          MEDIA QUERIES                               */
+/************************************************************************/
+
+@include media-breakpoint-up(md) {
+
+    body {
+        font-size: 100%;
+    }
+}

@@ -1,0 +1,170 @@
+
+@include media-breakpoint-up(md) {
+
+	a {
+		transition: all 0.2s ease-in-out;
+
+		&:hover, &:active, &:focus {
+			color: darken($blue, 9%);
+		}
+	}
+
+	.nav {
+		flex-direction: row;
+		justify-content: center;
+	}
+
+	/*********************
+	HEADER
+	*********************/
+
+	label[for="nav-trigger"] {
+		display: none;
+	}
+
+	.site-header {
+		padding: 0;
+	  	background-color: transparentize($white, 0.2);
+
+	  	.header-main {
+	  		padding: 0;
+	  	}
+
+	  	.site-logo {
+	  		background-color: $white;
+	  		padding: 2em $grid-gutter-width;
+	  		text-align: center;
+	  		margin-top: -2.75em;
+	  	}
+	}
+
+	  	.main-nav {
+	  		.nav {
+	  			position: static;
+			    display: flex;
+			    background-color: transparent;
+			    flex-direction: row;
+			    align-items: center;
+			    justify-content: flex-end;
+			    height: 100%;
+
+		  		li {
+		  			opacity: 1;
+		  			transform: none;
+		  			flex-grow: 1;
+
+		  			a {
+		  				font-size: $medium-text;
+			  			font-weight: bold;
+		  				padding: 0 0.5em;
+		  				line-height: 1.2;
+
+			  			&:hover {
+			  				color: $green;
+			  			}
+			  		}
+
+		  			&:last-child a {
+		  				padding-right: 0;
+		  			}
+
+		  			&.mobile {
+		  				display: none;
+		  			}
+		  		}
+	  		}
+	  	}
+
+		.preheader {
+			display: block;
+			background-color: $blue;
+
+			.nav {
+				justify-content: flex-end;
+				
+				li a {
+					color: $white;
+					line-height: 1;
+					padding: 0.75em 1em 1em;
+					font-weight: bold;
+					@include font-smooth;
+				}
+
+				.account a {
+					font-weight: normal;
+				}
+
+				.login a {
+					background-color: $green;
+
+					&:hover {
+						background-color: darken($green, 5%);
+					}
+				}
+			}
+		}
+
+
+	/*********************
+	HEROIC
+	*********************/
+
+	.page-header {
+		padding-top: calc(#{$logo-height} + #{$header-padding-md * 2} + 3em);
+
+		.site-title {
+        	font-size: 5em;
+		}
+
+		.site-subtitle {
+			font-size: $h2;
+		}
+
+		&.heroic {
+			padding-top: calc(#{$logo-height} + #{$header-padding-md * 2});
+		}
+	}
+
+
+	/*********************
+	BLOCKS
+	*********************/
+
+	.how-to {
+		li {
+			.icon {
+				flex: 0 0 150px;
+			}
+		}
+	}
+
+
+	/*********************
+	FOOTER
+	*********************/
+
+	.site-footer {
+		.nrmc-info {
+			font-size: $medium-text;
+
+			span {
+				display: inline;
+				
+				&:before {
+					content: '•';
+				    margin-left: calc(0.75em - 3px);
+				    padding-right: 0.75em;
+				}
+
+				&:first-child:before {
+					content: none;
+				}
+
+				a:hover {
+					color: $orange;
+				}
+			}
+		}
+	}
+
+}
