@@ -16,6 +16,7 @@
 	.pricing-grid {
 		.pricing-item {
 			@extend .col-lg-3;
+			max-width: 25%;
 		}
 	}
 }

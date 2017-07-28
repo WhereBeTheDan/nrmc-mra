@@ -19,6 +19,7 @@
 	.pricing-grid {
 		.pricing-item {
 			@extend .col-sm-6;
+			max-width: 50%;
 		}
 	}
 }

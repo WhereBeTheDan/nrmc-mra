@@ -78,18 +78,16 @@ form {
 
 .replacement-label {
     display: flex;
-    align-items: baseline;
+    align-items: center;
     position: relative;
     margin-bottom: 0.5em;
     font-size: $medium-text;
 
     &:before {
         content: '';
-        display: inline-block;
         height: $base;
         width: $base;
         border: 1px solid $grey;
-        vertical-align: text-top;
         margin: 0 0.3em 0 0;
     }
 }
