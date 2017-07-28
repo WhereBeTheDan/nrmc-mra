@@ -182,9 +182,13 @@ label[for="nav-trigger"] {
   		padding: $header-padding 0;
   	}
 
-  	.site-logo .logo {
-  		max-height: $logo-height;
-  	}
+  	.site-logo {
+  		display: block;
+  		
+  		.logo {
+	  		max-height: $logo-height;
+	  	}
+	}
 }
 	
   	.main-nav {
