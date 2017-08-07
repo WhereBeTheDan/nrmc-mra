@@ -138,6 +138,8 @@ form {
 
     &:checked + .checkbox-label:after {
         content: $check;
+        height: $base;
+        width: $base;
         font-family: $fa;
         left: 0;
         line-height: $base;
