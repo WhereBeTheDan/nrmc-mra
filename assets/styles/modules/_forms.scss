@@ -136,13 +136,11 @@ form {
 .checkbox {
     @extend .hidden-input;
 
-    &:checked + label {
-        &:after {
-            content: $check;
-            font-family: $fa;
-            left: 0;
-            line-height: $base;
-        }
+    &:checked + .checkbox-label:after {
+        content: $check;
+        font-family: $fa;
+        left: 0;
+        line-height: $base;
     }
 }
 
