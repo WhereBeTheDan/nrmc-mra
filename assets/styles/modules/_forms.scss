@@ -138,7 +138,7 @@ form {
 
     &:checked + label {
         &:after {
-            content: $check;
+            content: #{$check};
             font-family: $fa;
             left: 0;
             line-height: $base;
