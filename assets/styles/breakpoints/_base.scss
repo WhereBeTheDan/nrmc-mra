@@ -182,19 +182,13 @@ label[for="nav-trigger"] {
 		padding: $header-padding 0;
 	}
 
-<<<<<<< HEAD
 	.site-logo {
 		display: block;
 		
-		.logo {
-			max-height: $logo-height;
-		}
-=======
   		.logo {
 	  		max-height: $logo-height;
 	  		pointer-events: none;
 	  	}
->>>>>>> Fix svg logo pointer events
 	}
 }
 	
