@@ -17,6 +17,7 @@ var plumber      = require('gulp-plumber');
 var rev          = require('gulp-rev');
 var runSequence  = require('run-sequence');
 var sass         = require('gulp-sass');
+var sassUnicode  = require('gulp-sass-unicode');
 var sourcemaps   = require('gulp-sourcemaps');
 var uglify       = require('gulp-uglify');
 
@@ -95,6 +96,9 @@ var cssTasks = function(filename) {
         includePaths: ['.'],
         errLogToConsole: !enabled.failStyleTask
       }));
+    })
+    .pipe(function() {
+      return sassUnicode();
     })
     .pipe(concat, filename)
     .pipe(autoprefixer, {

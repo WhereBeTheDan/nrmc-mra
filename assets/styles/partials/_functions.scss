@@ -38,5 +38,5 @@ RESPONSIVE HELPER FUNCTION
 }
 
 @function unicode($str) {
-  @return unquote("\"")+$str+unquote("\"");
+  @return unquote("\"")+unquote(str-insert($str, "\\", 1))+unquote("\"")
 }
