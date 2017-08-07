@@ -10,6 +10,9 @@
     },
     "jquery.js": {
       "bower": [ "jquery" ]
+    },
+    "fonts": {
+      "bower": [ "font-awesome" ]
     }
   },
   "config": {

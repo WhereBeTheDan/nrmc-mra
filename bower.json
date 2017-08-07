@@ -23,7 +23,8 @@
     "jquery": "~1.x",
     "bootstrap": "boostrap#v4.0.0-alpha.6",
     "jquery-ui": "^1.12.1",
-    "select2": "^4.0.3"
+    "select2": "^4.0.3",
+    "font-awesome": "^4.7.0"
   },
   "overrides": {
     "bootstrap": {
@@ -33,6 +34,12 @@
         "scss/mixins/_border-radius.scss",
         "scss/_nav.scss",
         "scss/_navbar.scss"
+      ]
+    },
+    "font-awesome": {
+      "main": [
+        "./scss/font-awesome.scss",
+        "./fonts/*"
       ]
     }
   }
