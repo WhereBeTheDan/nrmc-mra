@@ -23,5 +23,13 @@
             $("html, body").animate({ scrollTop: scrolltop }, 600);
             return false;
         });
+
+        $('select').each(function() {
+            var placeholder = $(this).attr('placeholder');
+            $(this).select2({ 
+                placeholder: placeholder,
+                minimumResultsForSearch: Infinity,
+            });
+        });
 	});
 })(jQuery);
