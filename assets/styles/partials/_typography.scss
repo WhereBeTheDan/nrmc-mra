@@ -49,9 +49,14 @@ h6, .h6 {
 }
 
 p, ol, ul {
-    font-size: $medium-text;
     font-weight: 300;
     margin: 0 0 1em;
+}
+
+ol, ul {
+    ol, ul {
+        font-size: 1em;
+    }
 }
 
 p {
