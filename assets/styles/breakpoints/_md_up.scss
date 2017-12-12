@@ -35,6 +35,11 @@
 	  		padding: 2em $grid-gutter-width;
 	  		text-align: center;
 	  		margin-top: -2.75em;
+  			justify-content: center;
+
+	  		.logo {
+	  			max-height: $logo-height-md;
+	  		}
 	  	}
 	}
 
