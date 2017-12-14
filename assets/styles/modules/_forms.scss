@@ -109,6 +109,7 @@ form {
     line-height: 1.4;
 
     &:before {
+        display: block;
         content: '';
         height: $base;
         width: $base;
