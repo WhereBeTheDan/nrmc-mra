@@ -9,7 +9,6 @@
         	e.preventDefault();
 
         	var tooltip = $(this).data('definition');
-        	console.log(tooltip);
         	$('.tooltip-content.' + tooltip).addClass('active');
         });
 
@@ -28,7 +27,7 @@
             var placeholder = $(this).attr('placeholder');
             $(this).select2({ 
                 placeholder: placeholder,
-                minimumResultsForSearch: Infinity,
+                minimumResultsForSearch: 5,
             });
         });
 	});
