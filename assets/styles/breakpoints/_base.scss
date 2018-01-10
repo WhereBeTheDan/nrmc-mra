@@ -72,33 +72,42 @@ object {
 	display: block;
 }
 
-$li-padding: 1em;
+$li-padding: 1.75em;
 ol, ul {
+	counter-reset: num;
+
+	ol, ul {
+		margin: 0;
+	}
+
 	li {
+		position: relative;
 		padding-left: $li-padding;
 
 		&:before {
 			display: inline-block;
-			margin-left: -$li-padding;
-	    	margin-right: calc(#{$li-padding} - 6px);
 		}
 	}
 }
 
 ol {
-	counter-reset: num;
-
-	li:before {
+	> li:before {
+		position: absolute;
+		left: 0;
+		width: 1.25em;
+		text-align: right;
 		content: counter(num) '.';
 		counter-increment: num;
 	}
 }
 
 ul {
-	li:before {
+	> li:before {
 		content: '';
 		width: 0; 
 		height: 0;
+		margin-left: -$li-padding;
+		margin-right: calc(#{$li-padding} - 6px);
 		border-top: 6px solid transparent;
 		border-bottom: 6px solid transparent;
 		border-left: 6px solid $green;
